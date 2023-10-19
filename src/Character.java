@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Character { //création de ma classe avec ses keys
     private String charClass;
     private String charName;
@@ -11,6 +9,12 @@ public class Character { //création de ma classe avec ses keys
     private String charDefensiveItem;
 
     public Character() { //constructeur par défaut (sans paramètres)
+        charName = "Zob";
+        charClass = "Monk";
+        charLiveLevel = 15 ;
+        charStrength = 15;
+        charOffensiveItem = "Mandale de Forain";
+        charDefensiveItem = "";
     }
 
     public Character(String name, String jobClass) { //constructeur avec deux paramètres
@@ -75,20 +79,21 @@ public class Character { //création de ma classe avec ses keys
         this.charDefensiveItem = charDefensiveItem;
     }
 
-    public void createPlayer(String playerName, String playerClass) {
-        Scanner myMenu = new Scanner(System.in);
+    public void createPlayer(String playerName, String playerClass, Scanner scanner) {
         System.out.println("Player's name:");
-        playerName = myMenu.nextLine();
+        playerName = scanner.next();
         System.out.println("Choose your class, " + playerName + ":");
-        playerClass = myMenu.nextLine();
+        playerClass = scanner.next();
         if (playerClass.equalsIgnoreCase("Warrior")) {
             Character player = new Character(playerName, playerClass, 10, 10, "Sword", "Shield");
             System.out.println(player);
             System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
         } else if (playerClass.equalsIgnoreCase("Wizard")) {
-            Character player = new Character(playerName, playerClass, 6, 16, "Ember Staff", "Spell : Protect");
+            Character player = new Character(playerName, playerClass, 6, 15, "Ember Staff", "Spell : Protect");
             System.out.println(player);
             System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
+//        } else if (playerName.isEmpty() && playerClass.isEmpty()) {
+//            Character player = new Character();
         } else {
             System.out.println("This class does not exist.");
         }

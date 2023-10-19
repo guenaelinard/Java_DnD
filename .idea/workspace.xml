@@ -7,7 +7,6 @@
     <list default="true" id="9345a201-41b7-4e76-9500-51a208db698e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697617845670</updated>
       <workItem from="1697617846671" duration="18016000" />
-      <workItem from="1697698838796" duration="7802000" />
+      <workItem from="1697698838796" duration="15158000" />
     </task>
     <servers />
   </component>
@@ -88,7 +87,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Character.java</url>
-          <line>37</line>
+          <line>41</line>
           <properties class="Character" method="getCharName">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -97,21 +96,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Character.java</url>
-          <line>77</line>
+          <line>81</line>
           <properties class="Character" method="createPlayer">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>18</line>
-          <properties class="Menu" method="getMenu">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Character.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

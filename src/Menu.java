@@ -26,7 +26,7 @@ public class Menu {
                 String playerName = "";
                 String playerClass = "";
                 Character newPlayer = new Character();
-                newPlayer.createPlayer(playerName, playerClass);
+                newPlayer.createPlayer(playerName, playerClass, scanner);
             } else if (choice == 2) {
                 exitGame();
                 System.out.println("et bah non");
