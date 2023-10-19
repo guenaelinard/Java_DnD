@@ -11,9 +11,9 @@ public class Menu {
     }
 
     public void exitGame() { // methode de sortie du jeu (in development)
-        System.out.println("Valeur d'exit : " + exit);
+        System.out.println("Valeur d'exit avant : " + exit);
         exit = true;
-        System.out.println("Valeur d'exit : " + exit);
+        System.out.println("Valeur d'exit après : " + exit);
     }
 
     public void getMenu() {
@@ -30,6 +30,9 @@ public class Menu {
             } else if (choice == 2) {
                 exitGame();
                 System.out.println("et bah non");
+            }
+            while (!exit){
+                getMenuWithCharacterCreated();
             }
         }
     }
