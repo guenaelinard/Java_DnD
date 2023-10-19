@@ -1,43 +1,52 @@
 import java.util.Scanner;
 
 public class Menu {
-    public boolean isExit() {
-        return exit;
-    }
 
-    public void setExit(boolean exit) { //Get/Set du boolean exit
-        this.exit = exit;
-    }
     private boolean exit = false;
 
-    public Menu() {
+    private final Scanner scanner;
+
+    public Menu(Scanner scanner) {// constructeur de la classe Menu
+        this.scanner = scanner;
     }
 
-    public void exitGame() {
-         exit = true;
+    public void exitGame() { // methode de sortie du jeu (in development)
+        System.out.println("Valeur d'exit : " + exit);
+        exit = true;
+        System.out.println("Valeur d'exit : " + exit);
     }
 
     public void getMenu() {
-        System.out.println(" ----------------------------- PROJECT : D I C E  -----------------------------");
-        System.out.println("Select : ");
-        Scanner myChoice = new Scanner(System.in);
-        System.out.println("1 - Create new Player\n2 - Exit game");
-        int choice = myChoice.nextInt();
-        if (choice == 1) {
-            getPlayer();
-        } else if (choice == 2) {
-            exitGame();
-            System.out.println("et bah non");
+        while (!exit) {
+            System.out.println(" ----------------------------- PROJECT : D I C E  -----------------------------");
+            System.out.println("Select : ");
+            System.out.println("1 - Create new Player\n2 - Exit game");
+            int choice = scanner.nextInt();
+            if (choice == 1) {
+                String playerName = "";
+                String playerClass = "";
+                Character newPlayer = new Character();
+                newPlayer.createPlayer(playerName, playerClass);
+            } else if (choice == 2) {
+                exitGame();
+                System.out.println("et bah non");
+            }
         }
     }
 
-    public void getPlayer() {   //character creation using createPlayer method
-        Scanner myMenu = new Scanner(System.in);
-        System.out.println("Player's name:");
-        String playerName = myMenu.nextLine();
-        System.out.println("Choose your class, " + playerName + ":");
-        String playerClass = myMenu.nextLine();
-        Character newPlayer = new Character();
-        newPlayer.createPlayer(playerName, playerClass);
+
+    public void getMenuWithCharacterCreated() { //Menu instancing after the character creation
+        System.out.println("1 - Start new Game\n2 - Show Character info\n3 - Modify Character\n4 - Exit game");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            System.out.println("Feature in development");
+        } else if (choice == 2) {
+            System.out.println("Feature in development");
+        } else if (choice == 3) {
+            System.out.println("Feature in development");
+        } else if (choice == 4) {
+            exitGame();
+            System.out.println("et bah non");
+        }
     }
 }

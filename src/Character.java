@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Character { //création de ma classe avec ses keys
@@ -9,8 +11,6 @@ public class Character { //création de ma classe avec ses keys
     private String charDefensiveItem;
 
     public Character() { //constructeur par défaut (sans paramètres)
-        charName = "Zob";
-        charClass = "Wizard";
     }
 
     public Character(String name, String jobClass) { //constructeur avec deux paramètres
@@ -30,6 +30,7 @@ public class Character { //création de ma classe avec ses keys
     public String getCharClass() {
         return charClass;
     }
+
     public void setCharClass(String charClass) {
         this.charClass = charClass;
     }
@@ -37,6 +38,7 @@ public class Character { //création de ma classe avec ses keys
     public String getCharName() {
         return charName;
     }
+
     public void setCharName(String charName) {
         this.charName = charName;
     }
@@ -44,6 +46,7 @@ public class Character { //création de ma classe avec ses keys
     public int getCharLiveLevel() {
         return charLiveLevel;
     }
+
     public void setCharLiveLevel(int charLiveLevel) {
         this.charLiveLevel = charLiveLevel;
     }
@@ -51,6 +54,7 @@ public class Character { //création de ma classe avec ses keys
     public int getCharStrength() {
         return charStrength;
     }
+
     public void setCharStrength(int charStrength) {
         this.charStrength = charStrength;
     }
@@ -58,6 +62,7 @@ public class Character { //création de ma classe avec ses keys
     public String getCharOffensiveItem() {
         return charOffensiveItem;
     }
+
     public void setCharOffensiveItem(String charOffensiveItem) {
         this.charOffensiveItem = charOffensiveItem;
     }
@@ -65,11 +70,17 @@ public class Character { //création de ma classe avec ses keys
     public String getCharDefensiveItem() {
         return charDefensiveItem;
     }
+
     public void setCharDefensiveItem(String charDefensiveItem) {
         this.charDefensiveItem = charDefensiveItem;
     }
 
     public void createPlayer(String playerName, String playerClass) {
+        Scanner myMenu = new Scanner(System.in);
+        System.out.println("Player's name:");
+        playerName = myMenu.nextLine();
+        System.out.println("Choose your class, " + playerName + ":");
+        playerClass = myMenu.nextLine();
         if (playerClass.equalsIgnoreCase("Warrior")) {
             Character player = new Character(playerName, playerClass, 10, 10, "Sword", "Shield");
             System.out.println(player);
