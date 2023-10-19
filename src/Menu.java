@@ -17,34 +17,34 @@ public class Menu {
     }
 
     public void getMenu() {
+                Character player = new Character();
         while (!exit) {
-            System.out.println(" ----------------------------- PROJECT : D I C E  -----------------------------");
+            System.out.println("\n ----------------------------- PROJECT : D I C E  -----------------------------");
             System.out.println("Select : ");
             System.out.println("1 - Create new Player\n2 - Exit game");
             int choice = scanner.nextInt();
             if (choice == 1) {
                 String playerName = "";
                 String playerClass = "";
-                Character newPlayer = new Character();
-                newPlayer.createPlayer(playerName, playerClass, scanner);
+                player = player.createPlayer(playerName, playerClass, scanner);
             } else if (choice == 2) {
                 exitGame();
                 System.out.println("et bah non");
             }
-            while (!exit){
-                getMenuWithCharacterCreated();
+            while (!exit) {
+                getMenuWithCharacterCreated(player);
             }
         }
     }
 
 
-    public void getMenuWithCharacterCreated() { //Menu instancing after the character creation
-        System.out.println("1 - Start new Game\n2 - Show Character info\n3 - Modify Character\n4 - Exit game");
+    public void getMenuWithCharacterCreated(Character newPlayer) { //Menu instancing after the character creation
+        System.out.println("\n1 - Start new Game\n2 - Show Player info\n3 - Modify Character\n4 - Exit game");
         int choice = scanner.nextInt();
         if (choice == 1) {
             System.out.println("Feature in development");
         } else if (choice == 2) {
-            System.out.println("Feature in development");
+            showPlayerInfo(newPlayer);
         } else if (choice == 3) {
             System.out.println("Feature in development");
         } else if (choice == 4) {
@@ -52,4 +52,15 @@ public class Menu {
             System.out.println("et bah non");
         }
     }
+
+    public void showPlayerInfo(Character newPlayer) { //Display character stats
+        System.out.println("--             Player Info             --");
+        System.out.println("\n             Name : " + newPlayer.getCharName());
+        System.out.println("\n             Class : " + newPlayer.getCharClass());
+        System.out.println("\n             LifePoints : " + newPlayer.getCharLiveLevel());
+        System.out.println("\n             Strength : " + newPlayer.getCharStrength());
+        System.out.println("\n             Weapon : " + newPlayer.getCharOffensiveItem());
+        System.out.println("\n             Defense : " + newPlayer.getCharDefensiveItem());
+    }
 }
+

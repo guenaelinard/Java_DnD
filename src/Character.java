@@ -17,9 +17,13 @@ public class Character { //création de ma classe avec ses keys
         charDefensiveItem = "";
     }
 
-    public Character(String name, String jobClass) { //constructeur avec deux paramètres
+    public Character(String name) { //constructeur avec deux paramètres
         charName = name;
-        charClass = jobClass;
+        charClass = "Monk";
+        charLiveLevel = 15 ;
+        charStrength = 15;
+        charOffensiveItem = "Mandale de Forain";
+        charDefensiveItem = "";
     }
 
     public Character(String name, String jobClass, int lifeLevel, int Strength, String offensiveItem, String defensiveItem) { //constructeur complet
@@ -79,24 +83,25 @@ public class Character { //création de ma classe avec ses keys
         this.charDefensiveItem = charDefensiveItem;
     }
 
-    public void createPlayer(String playerName, String playerClass, Scanner scanner) {
+    public Character createPlayer(String playerName, String playerClass, Scanner scanner) {
+        Character player;
         System.out.println("Player's name:");
         playerName = scanner.next();
         System.out.println("Choose your class, " + playerName + ":");
         playerClass = scanner.next();
         if (playerClass.equalsIgnoreCase("Warrior")) {
-            Character player = new Character(playerName, playerClass, 10, 10, "Sword", "Shield");
+             player = new Character(playerName, playerClass, 10, 10, "Sword", "Shield");
             System.out.println(player);
             System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
         } else if (playerClass.equalsIgnoreCase("Wizard")) {
-            Character player = new Character(playerName, playerClass, 6, 15, "Ember Staff", "Spell : Protect");
+             player = new Character(playerName, playerClass, 6, 15, "Ember Staff", "Spell : Protect");
             System.out.println(player);
             System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
-//        } else if (playerName.isEmpty() && playerClass.isEmpty()) {
-//            Character player = new Character();
         } else {
             System.out.println("This class does not exist.");
+            player = new Character(playerName);
         }
+        return player;
     }
 
     @Override
