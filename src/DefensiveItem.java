@@ -4,10 +4,10 @@ public class DefensiveItem {
     int defenseProtectionLevel;
 
 
-    public DefensiveItem(String name, String type, int protectionLevel) {
+    public DefensiveItem(String name/*, String type, int protectionLevel*/) {
         defenseName = name;
-        defenseType = type;
-        defenseProtectionLevel = protectionLevel;
+//        defenseType = type;
+//        defenseProtectionLevel = protectionLevel;
     }
 }
 

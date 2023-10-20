@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner; //permet d'utiliser la classe Scanner via un import (Java Collections Framework
 
 public class Menu {
 
@@ -6,18 +6,24 @@ public class Menu {
 
     private final Scanner scanner;
 
+
+    //-------------------------------- CONSTRUCTORS ------------------------------------
+
     public Menu(Scanner scanner) {// constructeur de la classe Menu
         this.scanner = scanner;
     }
 
-    public void exitGame() { // methode de sortie du jeu (in development)
+    //----------------------------------------- METHODS --------------------------------------
+
+    public void exitGame() { // Used when the option "Exit game" is chosen
         System.out.println("Valeur d'exit avant : " + exit);
         exit = true;
         System.out.println("Valeur d'exit après : " + exit);
     }
 
-    public void getMenu() {
-                Character player = new Character();
+
+    public void displayMenu() { // Shows the Main Menu where you create your player
+        Character player = new Character();
         while (!exit) {
             System.out.println("\n ----------------------------- PROJECT : D I C E  -----------------------------");
             System.out.println("Select : ");
@@ -26,41 +32,65 @@ public class Menu {
             if (choice == 1) {
                 String playerName = "";
                 String playerClass = "";
-                player = player.createPlayer(playerName, playerClass, scanner);
+                createPlayer(player, playerName, playerClass, scanner);
             } else if (choice == 2) {
                 exitGame();
                 System.out.println("et bah non");
             }
             while (!exit) {
-                getMenuWithCharacterCreated(player);
+                displayMenuWithCharacterCreated(player);
             }
         }
     }
 
 
-    public void getMenuWithCharacterCreated(Character newPlayer) { //Menu instancing after the character creation
+    public void displayMenuWithCharacterCreated(Character player) { //Menu instancing after the character creation
         System.out.println("\n1 - Start new Game\n2 - Show Player info\n3 - Modify Character\n4 - Exit game");
         int choice = scanner.nextInt();
         if (choice == 1) {
             System.out.println("Feature in development");
         } else if (choice == 2) {
-            showPlayerInfo(newPlayer);
+            showPlayerInfo(player);
         } else if (choice == 3) {
-            System.out.println("Feature in development");
+            String playerName = "";
+            String playerClass = "";
+            createPlayer(player, playerName, playerClass, scanner);
         } else if (choice == 4) {
             exitGame();
             System.out.println("et bah non");
         }
     }
 
-    public void showPlayerInfo(Character newPlayer) { //Display character stats
-        System.out.println("--             Player Info             --");
-        System.out.println("\n             Name : " + newPlayer.getCharName());
-        System.out.println("\n             Class : " + newPlayer.getCharClass());
-        System.out.println("\n             LifePoints : " + newPlayer.getCharLiveLevel());
-        System.out.println("\n             Strength : " + newPlayer.getCharStrength());
-        System.out.println("\n             Weapon : " + newPlayer.getCharOffensiveItem());
-        System.out.println("\n             Defense : " + newPlayer.getCharDefensiveItem());
+    // Method to create your character or modify it (by modifying the attributes)
+    public void createPlayer(Character player, String playerName, String playerClass, Scanner scanner) {
+        System.out.println("Player's name:");
+        playerName = scanner.next();
+        System.out.println("Choose your class, " + playerName + ":");
+        playerClass = scanner.next();
+        if (playerClass.equalsIgnoreCase("Warrior")) {
+            player.setCharName(playerName);
+            player.setCharClass(playerClass);
+            player.setCharLifeLevel(10);
+            player.setCharStrength(10);
+            player.setCharOffensiveItem("Sword");
+            player.setCharDefensiveItem("Shield");
+            System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
+        } else if (playerClass.equalsIgnoreCase("Wizard")) {
+            player.setCharName(playerName);
+            player.setCharClass(playerClass);
+            player.setCharLifeLevel(6);
+            player.setCharStrength(15);
+            player.setCharOffensiveItem("Ember Staff");
+            player.setCharDefensiveItem("Spell : Protect");
+            System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
+        } else {
+            System.out.println("This class does not exist.");
+            player = new Character(playerName);
+        }
+    }
+
+    public void showPlayerInfo(Character player) { //Display character stats
+        System.out.println(player);
     }
 }
 

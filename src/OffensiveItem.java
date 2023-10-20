@@ -4,9 +4,9 @@ public class OffensiveItem {
     int weaponAttackLevel;
 
 
-    public OffensiveItem(String name, String type, int attackLevel) {
+    public OffensiveItem(String name/*, String type, int attackLevel*/) {
         weaponName = name;
-        weaponType = type;
-        weaponAttackLevel = attackLevel;
+//        weaponType = type;
+//        weaponAttackLevel = attackLevel;
     }
 }
