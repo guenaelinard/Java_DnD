@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9345a201-41b7-4e76-9500-51a208db698e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DefensiveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DefensiveItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OffensiveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OffensiveItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +76,7 @@
       <updated>1697617845670</updated>
       <workItem from="1697617846671" duration="18016000" />
       <workItem from="1697698838796" duration="21401000" />
-      <workItem from="1697785613183" duration="6207000" />
+      <workItem from="1697785613183" duration="8349000" />
     </task>
     <servers />
   </component>
@@ -101,7 +98,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
           <line>24</line>
-          <properties class="Menu" method="getMenu">
+          <properties class="Menu" method="displayMenu">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

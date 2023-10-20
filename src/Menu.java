@@ -16,9 +16,9 @@ public class Menu {
     //----------------------------------------- METHODS --------------------------------------
 
     public void exitGame() { // Used when the option "Exit game" is chosen
-        System.out.println("Valeur d'exit avant : " + exit);
+//        System.out.println("Valeur d'exit avant : " + exit);
         exit = true;
-        System.out.println("Valeur d'exit après : " + exit);
+//        System.out.println("Valeur d'exit après : " + exit);
     }
 
 
@@ -30,9 +30,7 @@ public class Menu {
             System.out.println("1 - Create new Player\n2 - Exit game");
             int choice = scanner.nextInt();
             if (choice == 1) {
-                String playerName = "";
-                String playerClass = "";
-                createPlayer(player, playerName, playerClass, scanner);
+                createPlayer(player, scanner);
             } else if (choice == 2) {
                 exitGame();
                 System.out.println("et bah non");
@@ -52,9 +50,7 @@ public class Menu {
         } else if (choice == 2) {
             showPlayerInfo(player);
         } else if (choice == 3) {
-            String playerName = "";
-            String playerClass = "";
-            createPlayer(player, playerName, playerClass, scanner);
+            createPlayer(player, scanner);
         } else if (choice == 4) {
             exitGame();
             System.out.println("et bah non");
@@ -62,11 +58,11 @@ public class Menu {
     }
 
     // Method to create your character or modify it (by modifying the attributes)
-    public void createPlayer(Character player, String playerName, String playerClass, Scanner scanner) {
+    public void createPlayer(Character player, Scanner scanner) {
         System.out.println("Player's name:");
-        playerName = scanner.next();
+        String playerName = scanner.next();
         System.out.println("Choose your class, " + playerName + ":");
-        playerClass = scanner.next();
+        String playerClass = scanner.next();
         if (playerClass.equalsIgnoreCase("Warrior")) {
             player.setCharName(playerName);
             player.setCharClass(playerClass);
@@ -85,7 +81,7 @@ public class Menu {
             System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
         } else {
             System.out.println("This class does not exist.");
-            player = new Character(playerName);
+            createPlayer(player, scanner);
         }
     }
 
