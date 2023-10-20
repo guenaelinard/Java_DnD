@@ -4,18 +4,13 @@ public class Character { //création de ma classe avec ses keys
     private String charName;
     private int charLifeLevel;
     private int charStrength;
-    private String charOffensiveItem;
-    private String charDefensiveItem;
+
+    private OffensiveItem offensiveItem;
+    private DefensiveItem defensiveItem;
 
 
     //---------------------------------------- CONSTRUCTORS -----------------------------------
     public Character() { //constructeur par défaut (sans paramètres)
-        charName = "Zob";
-        charClass = "Monk";
-        charLifeLevel = 15;
-        charStrength = 15;
-        charOffensiveItem = null;
-        charDefensiveItem = null;
     }
 
     public Character(String name) { //constructeur avec deux paramètres
@@ -23,18 +18,21 @@ public class Character { //création de ma classe avec ses keys
         charClass = "Monk";
         charLifeLevel = 15;
         charStrength = 15;
-        charOffensiveItem = null;
-        charDefensiveItem = null;
+        this.offensiveItem = new OffensiveItem("Mandale de Forain");
+        this.defensiveItem = new DefensiveItem("None");
     }
 
-    public Character(String name, String jobClass, int lifeLevel, int Strength, String offensiveItem, String defensiveItem) { //constructeur complet
+    public Character(String name, String jobClass, int lifeLevel, int Strength, OffensiveItem offensiveItem, DefensiveItem defensiveItem) { //constructeur complet
         charName = name;
         charClass = jobClass;
         charLifeLevel = lifeLevel;
         charStrength = Strength;
-        charOffensiveItem = offensiveItem;
-        charDefensiveItem = defensiveItem;
+        this.offensiveItem = offensiveItem;
+        this.defensiveItem = defensiveItem;
     }
+
+    //-------------------------------- METHODS --------------------------------
+
 
     //-------------------------------- GET/SET --------------------------------
 
@@ -69,24 +67,22 @@ public class Character { //création de ma classe avec ses keys
     public void setCharStrength(int charStrength) {
         this.charStrength = charStrength;
     }
-
-    public String getCharOffensiveItem() {
-        return charOffensiveItem;
+    public void setOffensiveItem(OffensiveItem offensiveItem) {
+        this.offensiveItem = offensiveItem;
     }
 
-    public void setCharOffensiveItem(String charOffensiveItem) {
-        this.charOffensiveItem = charOffensiveItem;
+    public DefensiveItem getDefensiveItem() {
+        return defensiveItem;
     }
 
-    public String getCharDefensiveItem() {
-        return charDefensiveItem;
+    public void setDefensiveItem(DefensiveItem defensiveItem) {
+        this.defensiveItem = defensiveItem;
+    }
+    public OffensiveItem getOffensiveItem() {
+        return offensiveItem;
     }
 
-    public void setCharDefensiveItem(String charDefensiveItem) {
-        this.charDefensiveItem = charDefensiveItem;
-    }
-
-
+    //---------------------------------- TO STRING -----------------------------------
 
     @Override
     public String toString() { //Affichage des attributs du perso
@@ -95,8 +91,8 @@ public class Character { //création de ma classe avec ses keys
                 "\n             Class : " + charClass +
                 "\n             LifePoints : " + charLifeLevel +
                 "\n             Strength : " + charStrength +
-                "\n             Weapon : " + charOffensiveItem +
-                "\n             Defense : " + charDefensiveItem;
+                "\n             Weapon : " + this.offensiveItem +
+                "\n             Defense : " + this.defensiveItem;
 
     }
 }

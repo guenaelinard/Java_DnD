@@ -9,5 +9,10 @@ public class DefensiveItem {
 //        defenseType = type;
 //        defenseProtectionLevel = protectionLevel;
     }
+
+    @Override
+    public String toString() {
+        return this.defenseName ;
+    }
 }
 
