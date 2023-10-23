@@ -1,5 +1,11 @@
+package Characters;
 
-public class Character { //création de ma classe avec ses keys
+import Items.protections.Bracers;
+import Items.protections.DefensiveItem;
+import Items.weapons.MandaleDeForain;
+import Items.weapons.OffensiveItem;
+
+public abstract class Character { //création de ma classe avec ses keys
     private String charClass;
     private String charName;
     private int charLifeLevel;
@@ -11,6 +17,12 @@ public class Character { //création de ma classe avec ses keys
 
     //---------------------------------------- CONSTRUCTORS -----------------------------------
     public Character() { //constructeur par défaut (sans paramètres)
+        charName = "Zob";
+        charClass = "Monk";
+        charLifeLevel = 15;
+        charStrength = 15;
+        this.offensiveItem = new MandaleDeForain("Mandale de Forain");
+        this.defensiveItem = new Bracers("Bracers");
     }
 
     public Character(String name) { //constructeur avec deux paramètres
@@ -18,8 +30,8 @@ public class Character { //création de ma classe avec ses keys
         charClass = "Monk";
         charLifeLevel = 15;
         charStrength = 15;
-        this.offensiveItem = new OffensiveItem("Mandale de Forain");
-        this.defensiveItem = new DefensiveItem("None");
+        this.offensiveItem = new MandaleDeForain("Mandale de Forain");
+        this.defensiveItem = new Bracers("Bracers");
     }
 
     public Character(String name, String jobClass, int lifeLevel, int Strength, OffensiveItem offensiveItem, DefensiveItem defensiveItem) { //constructeur complet

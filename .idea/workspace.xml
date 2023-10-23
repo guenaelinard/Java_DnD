@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9345a201-41b7-4e76-9500-51a208db698e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Characters/Monk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Characters/Warrior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Characters/Wizard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Items/protections/ProtectSpell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Items/protections/Shield.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Items/weapons/EmberStaff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Items/weapons/MandaleDeForain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Items/weapons/Sword.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DefensiveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DefensiveItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DefensiveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Items/protections/DefensiveItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OffensiveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OffensiveItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OffensiveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Items/weapons/OffensiveItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,25 +47,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "proofread",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -82,7 +91,8 @@
       <updated>1697617845670</updated>
       <workItem from="1697617846671" duration="18016000" />
       <workItem from="1697698838796" duration="21401000" />
-      <workItem from="1697785613183" duration="14618000" />
+      <workItem from="1697785613183" duration="14976000" />
+      <workItem from="1698044350480" duration="14325000" />
     </task>
     <servers />
   </component>
@@ -93,9 +103,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Character.java</url>
+          <url>file://$PROJECT_DIR$/src/Characters/Character.java</url>
           <line>46</line>
-          <properties class="Character" method="getCharName">
+          <properties class="Characters.Character" method="setCharClass">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -103,7 +113,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Menu.java</url>
-          <line>24</line>
+          <line>29</line>
           <properties class="Menu" method="displayMenu">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -111,7 +121,7 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Character.java</url>
+          <url>file://$PROJECT_DIR$/src/Characters/Character.java</url>
           <line>1</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
@@ -119,6 +129,16 @@
           <url>file://$PROJECT_DIR$/src/Main.java</url>
           <line>7</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Menu.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Items/weapons/OffensiveItem.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

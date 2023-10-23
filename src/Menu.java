@@ -1,3 +1,8 @@
+import Characters.Character;
+import Characters.Monk;
+import Characters.Warrior;
+import Characters.Wizard;
+
 import java.util.Scanner; //permet d'utiliser la classe Scanner via un import (Java Collections Framework
 
 public class Menu {
@@ -18,7 +23,7 @@ public class Menu {
     public void exitGame() { // Used when the option "Exit game" is chosen
 //        System.out.println("Valeur d'exit avant : " + exit);
         exit = true;
-//        System.out.println("Valeur d'exit après : " + exit);
+//        System.out.println("Valeur d'exit après : " + exit) ;
     }
 
 
@@ -35,14 +40,14 @@ public class Menu {
                 System.out.println("Choose your class, " + playerName + ":");
                 String playerClass = scanner.next();
                 if (playerClass.equalsIgnoreCase("Warrior")) {
-                    player = new Character(playerName, playerClass, 10, 10, new OffensiveItem("Sword"), new DefensiveItem("Shield"));
+                    player = new Warrior(playerName);
                     System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
                 } else if (playerClass.equalsIgnoreCase("Wizard")) {
-                    player = new Character(playerName, playerClass, 6, 15, new OffensiveItem("Amber Staff"), new DefensiveItem("TARUM"));
+                    player = new Wizard(playerName);
                     System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
                 } else {
-                    System.out.println("This class does not exist.");
-                    player = new Character(playerName);
+                    System.out.println("ERROR : Your class has been set by default.");
+                    player = new Monk(playerName);
                 }
             } else if (choice == 2) {
                 exitGame();
@@ -60,14 +65,14 @@ public class Menu {
                         System.out.println("Choose your class, " + playerName + ":");
                         String playerClass = scanner.next();
                         if (playerClass.equalsIgnoreCase("Warrior")) {
-                            player = new Character(playerName, playerClass, 10, 10, new OffensiveItem("Sword"), new DefensiveItem("Shield"));
+                            player = new Warrior(playerName);
                             System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
                         } else if (playerClass.equalsIgnoreCase("Wizard")) {
-                            player = new Character(playerName, playerClass, 6, 15, new OffensiveItem("Amber Staff"), new DefensiveItem("TARUM"));
+                            player = new Wizard(playerName);
                             System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
                         } else {
                             System.out.println("This class does not exist.");
-                            player = new Character(playerName);
+                            player = new Monk(playerName);
                         }
                     }
                     case 4 -> {
@@ -80,8 +85,8 @@ public class Menu {
     }
 
 
-//    public void displayMenuWithCharacterCreated(Character player) { //Menu instancing after the character creation
-//        System.out.println("\n1 - Start new Game\n2 - Show Player info\n3 - Modify Character\n4 - Exit game");
+//    public void displayMenuWithCharacterCreated(Characters.Character player) { //Menu instancing after the character creation
+//        System.out.println("\n1 - Start new Game\n2 - Show Player info\n3 - Modify Characters.Character\n4 - Exit game");
 //        int choice = scanner.nextInt();
 //        if (choice == 1) {
 //            System.out.println("Feature in development");
@@ -96,16 +101,16 @@ public class Menu {
 //    }
 
     // Method to create your character or modify it (by modifying the attributes)
-//    public void createPlayer(Character player, Scanner scanner) {
+//    public void createPlayer(Characters.Character player, Scanner scanner) {
 //        System.out.println("Player's name:");
 //        String playerName = scanner.next();
 //        System.out.println("Choose your class, " + playerName + ":");
 //        String playerClass = scanner.next();
-//        if (playerClass.equalsIgnoreCase("Warrior")) {
-//            player = new Character(playerName, playerClass, 10, 10, new OffensiveItem("Sword"), new DefensiveItem("Shield"));
+//        if (playerClass.equalsIgnoreCase("Characters.Warrior")) {
+//            player = new Characters.Character(playerName, playerClass, 10, 10, new Items.Items.weapons.OffensiveItem("Sword"), new Items.Items.protections.DefensiveItem("Shield"));
 //            System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
-//        } else if (playerClass.equalsIgnoreCase("Wizard")) {
-//            player = new Character(playerName, playerClass, 6, 15, new OffensiveItem("Amber Staff"), new DefensiveItem("TARUM"));
+//        } else if (playerClass.equalsIgnoreCase("Characters.Wizard")) {
+//            player = new Characters.Character(playerName, playerClass, 6, 15, new Items.Items.weapons.OffensiveItem("Amber Staff"), new Items.Items.protections.DefensiveItem("TARUM"));
 //            System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
 //        } else {
 //            System.out.println("This class does not exist.");
