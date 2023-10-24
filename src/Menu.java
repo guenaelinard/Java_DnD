@@ -71,7 +71,7 @@ public class Menu {
                             player = new Wizard(playerName);
                             System.out.println("Welcome, " + playerName + " the " + playerClass + ".");
                         } else {
-                            System.out.println("This class does not exist.");
+                            System.out.println("ERROR : Your class has been set by default.");
                             player = new Monk(playerName);
                         }
                     }

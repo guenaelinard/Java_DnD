@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9345a201-41b7-4e76-9500-51a208db698e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Characters/Monk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Characters/Warrior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Characters/Wizard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Items/protections/ProtectSpell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Items/protections/Shield.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Items/weapons/EmberStaff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Items/weapons/MandaleDeForain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Items/weapons/Sword.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DefensiveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Items/protections/DefensiveItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OffensiveItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Items/weapons/OffensiveItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +24,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -92,7 +80,7 @@
       <workItem from="1697617846671" duration="18016000" />
       <workItem from="1697698838796" duration="21401000" />
       <workItem from="1697785613183" duration="14976000" />
-      <workItem from="1698044350480" duration="14325000" />
+      <workItem from="1698044350480" duration="15874000" />
     </task>
     <servers />
   </component>
@@ -105,7 +93,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Characters/Character.java</url>
           <line>46</line>
-          <properties class="Characters.Character" method="setCharClass">
+          <properties class="Characters.Character">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -119,6 +107,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Items/protections/DefensiveItem.java</url>
+          <line>13</line>
+          <properties class="Items.protections.DefensiveItem" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Characters/Character.java</url>
